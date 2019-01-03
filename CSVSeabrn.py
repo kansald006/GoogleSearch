@@ -3,7 +3,7 @@ import numpy as np
 import pandas as pd
 import seaborn as sns
 
-df=pd.read_csv("Fulldata.csv",index_col='Name')
+df=pd.read_csv("Fulldata.csv")
 # print(df)
 # print(df.head(5))
 #
@@ -30,4 +30,7 @@ X=np.array(list(top5['Name']))
 Y=np.array(list(top5['GK_Shot-Stopper']))
 # df1=df[['GK_Handling','GK_Diving']]
 # print(df1)
-print(top5.)
+sns.barplot(X, Y, palette="colorblind")
+plt.ylabel("Shot Stopper Score")
+
+plt.show()
